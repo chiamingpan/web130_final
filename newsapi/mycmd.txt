@@ -1,0 +1,61 @@
+    1  git clone https://github.com/chiamingpan/web130_final .
+    2  npm install
+    3  git remote show origin
+    4  git branch
+    5  git checkout vera
+    6  git branch vera
+    7  git branch
+    8  git checkout vera
+    9  git add index.html
+   10  git commit -am "Vera test."
+   11  git status
+   12  git push
+   13  cd ..
+   14  cd vera
+   15  cd web130_vchuang_final
+   16  clear
+   17  git status
+   18  git remote show origin
+   19  git init
+   20  git status
+   21  git checkout vera
+   22  git branch
+   23  git checkout vera
+   24  git remote show origin
+   25  cd .c9
+   26  cd ..
+   27  cd workspace
+   28  ls
+   29  git branch
+   30  git checkout vera
+   31  cd final_project
+   32  git status
+   33  git checkout master
+   34  git branch graphcool_vera
+   35  git checkout graphcool_vera
+   36  npm install -g graphcool
+   37  graphcool_vera init newsapi
+   38  git checkout graph_vera
+   39  git checkout master
+   40  git checkout graph_vera
+   41  git checkout grapcool_vera
+   42  git checkout graphcool
+   43  git status
+   44  git checkout graphcool_vera
+   45  graphcool_vera init newapi
+   46  graphcool_vera init newsapi
+   47  graphcool init newsapi
+   48  graphcool deploy
+   49  cd newsapi
+   50  graphcool deploy
+   51  graphcool playground
+   52  graphcool deploy
+   53  graph add-template graph/templates/auth/email-password
+   54  graphcool add-template graph/templates/auth/email-password
+   55  $ graphcool add-template graphcool/templates/auth/email-password
+   56  graphcool add-template graphcool/templates/auth/email-password
+   57  graphcool deploy
+   58  graphcool deploy --force
+   59  history
+   60  history >> mycmd.text
+   61  history >> mycmd.txt
