@@ -1,3 +1,65 @@
-@import "grid"
 @import "utils"
+@import "color"
 @import "bootstrap"
+@import "grid"
+
+header
+    width: 100%
+    
+div#logo
+    margin: 0 auto
+    text-align: center
+    img
+        height: 100px
+        @include size(small)
+            height: 80px
+
+.flex-container
+    display: flex
+    padding: 0
+    margin: 0
+    @include size(small)
+        flex-wrap: wrap
+    li
+        flex: 1
+        @include size(small)
+            flex-basis: 50%
+        
+div#secondary-nav
+    overflow: hidden
+    ul
+        height: 50px
+        line-height: 50px
+        width: 60%
+        margin: 0 auto
+        li
+            list-style: none
+            float: left
+            text-align: center
+            &#login a
+                text-decoration: underline
+                color: $skyblue
+            &#date, &#weather
+                @include size(small)
+                    display: none
+            
+nav#primary-nav
+    background-color: $dark-grey
+    width: 100%
+    height: 50px
+    line-height: 50px
+    clear: both
+    @include size(small)
+        height: 100px
+    ul
+        width: 60%
+        text-align: center
+        @include size(small)
+            width: 100%
+        li
+            list-style: none
+            &:hover
+                background-color: $black 
+            a
+                text-decoration: none
+                color: $white
