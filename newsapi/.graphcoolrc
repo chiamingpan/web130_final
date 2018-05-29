@@ -1,3 +1,3 @@
 targets:
-  prod: shared-us-west-2/cjhjsxgey3bs701583d0cp19s
+  prod: shared-us-west-2/cjhjuxqym3eul0158aglhg1mg
   default: prod
