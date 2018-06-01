@@ -1,7 +1,8 @@
-@import "utils"
 @import "color"
+@import "utils"
 @import "bootstrap"
 @import "grid"
+
 
 header
     width: 100%
@@ -63,3 +64,45 @@ nav#primary-nav
             a
                 text-decoration: none
                 color: $white
+
+.form-box
+    margin: 50px auto
+    width: 100%
+    
+label
+    display: block
+    margin-bottom: 0
+    margin-top: 0.5em
+    color: $dark-grey
+    
+
+input, textarea, select#catergory
+    height: 35px
+    line-height: 35px
+    width: 100%
+    border: 1px solid $light-grey
+    border-radius: 5px
+    background: $white
+    &::placeholder
+        color: $light-grey
+        font-size: .9em
+    &[type="text"]
+        padding-left: 10px
+        
+textarea
+    height: 200px
+    padding-left: 10px
+    
+select#catergory
+    font-size: .9em
+    color: $light-grey
+    
+div.submit-btn
+    margin-top: 20px
+    text-align: center
+
+input[type="submit"] 
+    width: 50%   
+    background: $skyblue
+    color: $white
+    border: none
