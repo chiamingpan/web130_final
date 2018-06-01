@@ -1,0 +1,1 @@
+import 'js/graphql/articles.js';
