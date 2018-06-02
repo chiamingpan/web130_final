@@ -8,17 +8,19 @@ type User @model {
   updatedAt: DateTime! # read-only (managed by Graphcool)
   email: String! @isUnique
   password: String!
-  articles: [Article!]! @relation(name: "UserArticles")
+  articles: [Article!]!  @relation(name: "UserArticles")
 }
-
-
-# Uncomment the model below as well
 
   type Article @model {
   id: ID! @isUnique
   title: String!
-  content: String
+  content: String!
   author: User! @relation(name: "UserArticles")
   }
+  
+#   # Every relation also required a back-relation (to determine 1:1, 1:n or n:m)
+#   author: User! @relation(name: "UserPosts")
+# }
+
 
 
