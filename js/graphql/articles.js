@@ -1,3 +1,4 @@
+/* global $ */
 let getAllArticles = `
     query AllArticles {
       allArticles {
