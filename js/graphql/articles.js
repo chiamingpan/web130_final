@@ -1,5 +1,4 @@
 /* global $ */
-
 let getAllArticles = `
     query AllArticles {
       allArticles {
@@ -11,8 +10,8 @@ let getAllArticles = `
 `;
 
 $(document).ready(function() {
-    $.post({
-        url: 'https://api.graph.cool/simple/v1/cjhjspp3l43x40186ohece9if',
+    $.post(
+        'https://api.graph.cool/simple/v1/cjhjsxgey3bs701583d0cp19s',
         data: JSON.stringify({
             query: getAllArticles
         }),
