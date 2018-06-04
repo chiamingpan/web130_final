@@ -1,9 +1,9 @@
 @import "color"
 @import "utils"
-@import "bootstrap"
+// @import "bootstrap"
 @import "grid"
 
-
+// header
 header
     width: 100%
     
@@ -65,6 +65,8 @@ nav#primary-nav
                 text-decoration: none
                 color: $white
 
+
+// form
 .form-box
     margin: 50px auto
     width: 100%
@@ -75,7 +77,6 @@ label
     margin-top: 0.5em
     color: $dark-grey
     
-
 input, textarea, select#catergory
     height: 35px
     line-height: 35px
@@ -106,3 +107,30 @@ input[type="submit"]
     background: $skyblue
     color: $white
     border: none
+
+
+// vera_login
+#login-form
+    display: inline-block
+    text-align: center
+        
+.editor-login 
+    margin: 0 auto
+    padding: 40px
+    border-radius: 6px
+    border: 1px solid #CCCCCC
+    .input-group 
+        margin-top: 8px
+        width: 100%
+    .login-btn 
+        margin-top: 25px
+        width: 100%
+
+input[type="submit"] 
+    width: 100%   
+    background: $skyblue
+    color: $white
+    border: none
+    
+input[type="submit"]:hover
+    background: $btnblue
