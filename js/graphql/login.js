@@ -11,13 +11,13 @@ let loginMutation = `
 $(document).ready(function() {
     // Login View
     if (typeof JS_PAGE !== 'undefined' && JS_PAGE == 'login_view') {
-        $('#login-button').on('click', (event) => {
+        $('#login-btn').on('click', (event) => {
             event.preventDefault();
             let username = $('#username').val(),
                 password = $('#password').val();
                 
             $.post({
-                url: 'https://api.graph.cool/simple/v1/cjhjspp3l43x40186ohece9if',
+                url: 'https://api.graph.cool/simple/v1/cjhjsxgey3bs701583d0cp19s',
                 data: JSON.stringify({
                     query: loginMutation,
                     variables: {
