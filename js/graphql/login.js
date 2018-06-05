@@ -1,4 +1,4 @@
-/* global $ JS_PAGE */
+/* global $ JS_PAGE Cookies */
 
 let loginMutation = `
     mutation AuthenticateUser($email: String!, $password: String!) {
@@ -11,7 +11,7 @@ let loginMutation = `
 $(document).ready(function() {
     // Login View
     if (typeof JS_PAGE !== 'undefined' && JS_PAGE == 'login_view') {
-        $('#login-btn').on('click', (event) => {
+        $('#login-button').on('click', (event) => {
             event.preventDefault();
             let username = $('#username').val(),
                 password = $('#password').val();
@@ -31,6 +31,8 @@ $(document).ready(function() {
                         alert('Login failed! Try again.');
                     } else {
                         console.log(user);
+                        Cookies.set('authorId', user.id, { expires: 7 });
+                        Cookies.set('token', user.token, { expires: 7 });
                     }
                 },
                 contentType: 'application/json'
