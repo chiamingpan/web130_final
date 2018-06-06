@@ -11,7 +11,7 @@ let getAllArticles = `
 `;
 
 let CreateArticle = `
-    mutation CreateArticle($authorId: ID!, $title: String!, $content: String) {
+    mutation CreateArticle($authorId: ID!, $title: String!, $content: String!) {
         createArticle(authorId: $authorId, title: $title, content: $content) {
             id,
             title

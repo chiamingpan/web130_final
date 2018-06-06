@@ -10533,7 +10533,7 @@ return jQuery;
 
 var getAllArticles = '\n    query AllArticles {\n      allArticles {\n        id,\n        title,\n        content\n      }\n    }\n';
 
-var CreateArticle = '\n    mutation CreateArticle($authorId: ID!, $title: String!, $content: String) {\n        createArticle(authorId: $authorId, title: $title, content: $content) {\n            id,\n            title\n        }\n    }\n';
+var CreateArticle = '\n    mutation CreateArticle($authorId: ID!, $title: String!, $content: String!) {\n        createArticle(authorId: $authorId, title: $title, content: $content) {\n            id,\n            title\n        }\n    }\n';
 
 $(document).ready(function () {
     // List View
