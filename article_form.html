@@ -5,23 +5,55 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="css/main.css" type="text/css" />
-
     <title>Hello, world!</title>
 </head>
 <body>
-    
-    <!-- Add nav bar here. -->
-    
+    <header>
+        <div id="logo"><img src="images/seattle-times-logo.jpg" alt="logo"></div>
+        <div id="secondary-nav">
+             <ul class="flex-container">
+               <li id="date">Monday, May 16, 2018</li>
+               <li id="weather"><img src="images/partlycloudy.gif" alt="weather-icon"> 51 &#8457;</li>
+               <li id="login"><a href="login.html">Editor Login</a></li>
+            </ul>
+        </div>
+        <nav id="primary-nav">
+            <ul class="flex-container">
+               <li><a href="">Home</a></li>
+               <li><a href="">Campus</a></li>
+               <li><a href="">Community</a></li>
+               <li><a href="">Opinion</a></li>
+            </ul>
+        </nav>
+    </header>
     <main class="container">
-        <div class="row">
-            <div class="col-sm-12" id='main-content'>
-                <h1>Article Form</h1>
+        <div class="row justify-content-center">
+            <div class="col-lg-6 col-md-12 col-sm-12 main-content">
+                <br>
+                <br>
+                <h4>Article Form </h4>
+                <form action="">
+                    <label for="title">Title</label>
+                    <input type="text" id="title" name="title" placeholder="Enter the title">
+                    <!--<label for="catergory">Category</label>-->
+                    <!--<select id="catergory" name="catergory">-->
+                    <!--    <option value="entertainment">Entertainment</option>-->
+                    <!--    <option value="politics">Politics</option>-->
+                    <!--    <option value="health">Health</option>-->
+                    <!--    <option value="technology">Technology</option>-->
+                    <!--    <option value="sports">Sports</option>-->
+                    <!--</select>-->
+                    <label for="content">Content</label>
+                    <textarea id="content" name="content" placeholder="Write something..."></textarea>
+                    <div class="submit-btn">
+                    <input id="save-article-button" type="submit" value="Submit">
+                    </div>
+                </form>
             </div>
         </div>
     </main>
-    
-    <script type="text/javascript">
-        var JS_PAGE = 'form_view';
+    <script type="text/javascript"> 
+    var JS_PAGE = 'form_view';
     </script>
     <script type="text/javascript" src="js/build/app.js"></script>
 </body>
