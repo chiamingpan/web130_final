@@ -1,4 +1,4 @@
-/* global $ JS_PAGE */
+/* global $ JS_PAGE Cookies */
 
 let loginMutation = `
     mutation AuthenticateUser($email: String!, $password: String!) {
@@ -17,7 +17,7 @@ $(document).ready(function() {
                 password = $('#password').val();
                 
             $.post({
-                url: 'https://api.graph.cool/simple/v1/cjhjspp3l43x40186ohece9if',
+                url: 'https://api.graph.cool/simple/v1/cjhjsxgey3bs701583d0cp19s',
                 data: JSON.stringify({
                     query: loginMutation,
                     variables: {
@@ -31,6 +31,8 @@ $(document).ready(function() {
                         alert('Login failed! Try again.');
                     } else {
                         console.log(user);
+                        Cookies.set('authorId', user.id, { expires: 7 });
+                        Cookies.set('token', user.token, { expires: 7 });
                     }
                 },
                 contentType: 'application/json'
