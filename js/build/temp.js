@@ -23,7 +23,7 @@ $(document).ready(function () {
                     for (var _iterator = articles[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
                         var article = _step.value;
 
-                        html += '<h2>' + article.title + '</h2>\n                             <p>' + article.content + '</p>';
+                        html += '<div class="article-content">\n                                <h2>' + article.title + '</h2>\n                                <p>' + article.content + '</p>\n                            </div>';
                     }
                 } catch (err) {
                     _didIteratorError = true;

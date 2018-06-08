@@ -31,8 +31,10 @@ $(document).ready(function() {
                 let articles = response.data.allArticles;
                 let html = '';
                 for (let article of articles) {
-                    html += `<h2>${article.title}</h2>
-                             <p>${article.content}</p>`;
+                    html += `<div class="article-content">
+                                <h2>${article.title}</h2>
+                                <p>${article.content}</p>
+                            </div>`;
                 }
                 $('#main-content').html(html);
             },
