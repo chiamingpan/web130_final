@@ -5,19 +5,36 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="css/main.css" type="text/css" />
-
     <title>Hello, world!</title>
 </head>
 <body>
-    
-    <!-- Add nav bar here. -->
-    
-    <main class="container">
-        <div class="row">
-            <div class="col-sm-12" id='main-content'>
-                <h1>Article Detail</h1>
-            </div>
+    <header>
+        <div id="logo"><img src="images/seattle-times-logo.jpg" alt="logo"></div>
+        <div id="secondary-nav">
+             <ul class="flex-container">
+               <li id="date">Monday, May 16, 2018</li>
+               <li id="weather"><img src="images/partlycloudy.gif" alt="weather-icon"> 51 &#8457;</li>
+               <li id="login"><a href="login.html">Editor Login</a></li>
+            </ul>
         </div>
+        <nav id="primary-nav">
+            <ul class="flex-container">
+               <li><a href="">Home</a></li>
+               <li><a href="">Campus</a></li>
+               <li><a href="">Community</a></li>
+               <li><a href="">Opinion</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container article-detail">
+        <section class="row justify-content-center">
+            <article class="col-md-8">
+                <h2 id="article-title" class="headline"></h2>
+                <div id="article-content">
+                    Loading...
+                </div>
+            </article>
     </main>
     
     <script type="text/javascript">

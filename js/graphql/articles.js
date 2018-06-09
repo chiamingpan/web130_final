@@ -10,6 +10,15 @@ let getAllArticles = `
     }
 `;
 
+let getArticle = `
+    query GetArticle($id: ID) {
+        Article(id: $id) {
+            title,
+            content
+        }
+    }
+`;
+
 let CreateArticle = `
     mutation CreateArticle($authorId: ID!, $title: String!, $content: String!) {
         createArticle(authorId: $authorId, title: $title, content: $content) {
@@ -32,7 +41,11 @@ $(document).ready(function() {
                 let html = '';
                 for (let article of articles) {
                     html += `<div class="article-content">
-                                <h2>${article.title}</h2>
+                                <h2>
+                                    <a href="article_detail.html#${article.id}">
+                                    ${article.title}
+                                    </a>
+                                </h2>
                                 <p>${article.content}</p>
                             </div>`;
                 }
@@ -42,6 +55,27 @@ $(document).ready(function() {
         });
     }
     
+    //Detail View
+    if (typeof JS_PAGE !== 'undefined' && JS_PAGE == 'detail_view') {
+        let article_id = window.location.hash.substring(1);
+        console.log('Article id is? ' + article_id);
+        $.post({
+            url: 'https://api.graph.cool/simple/v1/cjhjsxgey3bs701583d0cp19s',
+            data: JSON.stringify({
+                query: getArticle,
+                variables: {
+                    id: article_id
+                }
+            }),
+            success: (response) => {
+                let article = response.data.Article;
+                $('#article-title').html(article.title);
+                $('#article-content').html(article.content);
+            },
+            contentType: 'application/json' 
+        });
+    }
+  
     // Form View
     if (typeof JS_PAGE !== 'undefined' && JS_PAGE == 'form_view') {
         $('#save-article-button').on('click', (event) => {
@@ -64,8 +98,8 @@ $(document).ready(function() {
                     Authorization: 'Bearer ' + Cookies.get('token')
                 },
                 success: (response) => {
-                    let article = response.data;
-                    console.log(article);
+                    let article = response.data.createArticle;
+                    window.location = 'article_detail.html#' + article.id;
                 },
                 contentType: 'application/json'
             }); 

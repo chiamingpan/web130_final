@@ -6588,3 +6588,6 @@ button[type="submit"]:hover {
   width: 50%;
   padding: 10px;
   display: inline-block; }
+
+main.container.article-detail {
+  margin-top: 45px; }
