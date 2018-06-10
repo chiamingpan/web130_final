@@ -10668,13 +10668,8 @@ $(document).ready(function () {
                         console.log(user);
                         Cookies.set('authorId', user.id, { expires: 7 });
                         Cookies.set('token', user.token, { expires: 7 });
-<<<<<<< HEAD
-                        // Redirect 
-                        window.location = 'article_form.html';
-=======
                         // Redirect
                         window.location = "article_form.html";
->>>>>>> 2b0d9b87c6b529679a3b4d65cdfc174709979387
                     }
                 },
                 contentType: 'application/json'
