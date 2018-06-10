@@ -6591,3 +6591,10 @@ button[type="submit"]:hover {
 
 main.container.article-detail {
   margin-top: 45px; }
+
+button#logout-button {
+  background: transparent;
+  color: #87CEEB;
+  text-decoration: underline;
+  width: auto;
+  border: none; }
