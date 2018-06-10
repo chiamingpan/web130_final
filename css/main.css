@@ -6584,10 +6584,23 @@ button[type="submit"] {
 button[type="submit"]:hover {
   background: #0DA4E3; }
 
-.article-content {
-  width: 50%;
-  padding: 10px;
-  display: inline-block; }
-
 main.container.article-detail {
   margin-top: 45px; }
+
+#main-content {
+  display: flex;
+  flex-wrap: wrap; }
+  #main-content .article-content {
+    flex-grow: 1; }
+    @media screen and (min-width: 64em) {
+      #main-content .article-content {
+        padding: 10px;
+        flex-basis: 50%; } }
+    @media screen and (min-width: 40em) and (max-width: 63.99em) {
+      #main-content .article-content {
+        padding: 5px;
+        flex-basis: 60%; } }
+    @media screen and (max-width: 39.99em) {
+      #main-content .article-content {
+        padding: 5px;
+        flex-basis: 100%; } }

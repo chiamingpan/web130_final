@@ -137,15 +137,27 @@ button[type="submit"]
     
 button[type="submit"]:hover
     background: $btnblue
-    
-// list_view
-.article-content
-    width: 50%
-    padding: 10px   
-    display: inline-block
-    
-    
+
+
 // article_detail
 main.container.article-detail
     margin-top: 45px
+
+    
+// list_view(index.html)
+#main-content
+    display: flex
+    flex-wrap: wrap
+    .article-content
+        flex-grow: 1
+        @include size(large)
+            padding: 10px  
+            flex-basis: 50%
+        @include size(medium)
+            padding: 5px  
+            flex-basis: 60%
+        @include size(small)
+            padding: 5px 
+            flex-basis: 100%
+        
     
