@@ -6587,6 +6587,7 @@ button[type="submit"]:hover {
 main.container.article-detail {
   margin-top: 45px; }
 
+<<<<<<< HEAD
 #main-content {
   display: flex;
   flex-wrap: wrap; }
@@ -6604,3 +6605,11 @@ main.container.article-detail {
       #main-content .article-content {
         padding: 5px;
         flex-basis: 100%; } }
+=======
+button#logout-button {
+  background: transparent;
+  color: #87CEEB;
+  text-decoration: underline;
+  width: auto;
+  border: none; }
+>>>>>>> 544d8a932f5eafbb827e6f8af9934d6746d814a6
