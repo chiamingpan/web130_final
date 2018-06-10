@@ -6583,3 +6583,11 @@ button[type="submit"] {
 
 button[type="submit"]:hover {
   background: #0DA4E3; }
+
+.article-content {
+  width: 50%;
+  padding: 10px;
+  display: inline-block; }
+
+main.container.article-detail {
+  margin-top: 45px; }

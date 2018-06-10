@@ -40,14 +40,14 @@ $(document).ready(function() {
                 let articles = response.data.allArticles;
                 let html = '';
                 for (let article of articles) {
-                    html += `
-                        <h2>
-                            <a href="article_detail.html#${article.id}">
-                                ${article.title}
-                            </a>
-                        </h2>
-                        <p>${article.content}</p>
-                    `;
+                    html += `<div class="article-content">
+                                <h2>
+                                    <a href="article_detail.html#${article.id}">
+                                    ${article.title}
+                                    </a>
+                                </h2>
+                                <p>${article.content}</p>
+                            </div>`;
                 }
                 $('#main-content').html(html);
             },
@@ -55,7 +55,7 @@ $(document).ready(function() {
         });
     }
     
-    // Detail View
+    //Detail View
     if (typeof JS_PAGE !== 'undefined' && JS_PAGE == 'detail_view') {
         let article_id = window.location.hash.substring(1);
         console.log('Article id is? ' + article_id);
@@ -75,7 +75,7 @@ $(document).ready(function() {
             contentType: 'application/json' 
         });
     }
-    
+
     // Form View
     if (typeof JS_PAGE !== 'undefined' && JS_PAGE == 'form_view') {
         $('#save-article-button').on('click', (event) => {

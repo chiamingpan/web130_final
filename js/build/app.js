@@ -10556,7 +10556,11 @@ $(document).ready(function () {
                     for (var _iterator = articles[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
                         var article = _step.value;
 
+<<<<<<< HEAD
                         html += '\n                        <h2>\n                            <a href="article_detail.html#' + article.id + '">\n                                ' + article.title + '\n                            </a>\n                        </h2>\n                        <p>' + article.content + '</p>\n                    ';
+=======
+                        html += '<div class="article-content">\n                                <h2>\n                                    <a href="article_detail.html#' + article.id + '">\n                                    ' + article.title + '\n                                    </a>\n                                </h2>\n                                <p>' + article.content + '</p>\n                            </div>';
+>>>>>>> 2b0d9b87c6b529679a3b4d65cdfc174709979387
                     }
                 } catch (err) {
                     _didIteratorError = true;
@@ -10579,7 +10583,11 @@ $(document).ready(function () {
         });
     }
 
+<<<<<<< HEAD
     // Detail View
+=======
+    //Detail View
+>>>>>>> 2b0d9b87c6b529679a3b4d65cdfc174709979387
     if (typeof JS_PAGE !== 'undefined' && JS_PAGE == 'detail_view') {
         var article_id = window.location.hash.substring(1);
         console.log('Article id is? ' + article_id);
@@ -10660,8 +10668,13 @@ $(document).ready(function () {
                         console.log(user);
                         Cookies.set('authorId', user.id, { expires: 7 });
                         Cookies.set('token', user.token, { expires: 7 });
+<<<<<<< HEAD
                         // Redirect 
                         window.location = 'article_form.html';
+=======
+                        // Redirect
+                        window.location = "article_form.html";
+>>>>>>> 2b0d9b87c6b529679a3b4d65cdfc174709979387
                     }
                 },
                 contentType: 'application/json'
