@@ -10671,6 +10671,7 @@ $(document).ready(function () {
                         console.log(user);
                         Cookies.set('authorId', user.id, { expires: 7 });
                         Cookies.set('token', user.token, { expires: 7 });
+
                         // Redirect
                         window.location = "article_form.html";
                     }
