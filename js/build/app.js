@@ -10629,6 +10629,17 @@ $(document).ready(function () {
             });
         });
     }
+
+    //All pages
+    if (typeof JS_PAGE !== 'undefined') {
+        $('#logout-button').on('click', function (event) {
+            // console.log(user);
+            Cookies.set('authorId', null);
+            Cookies.set('token', null);
+            // Redirect
+            window.location = "index.html";
+        });
+    }
 });
 
 /* global $ JS_PAGE Cookies */
