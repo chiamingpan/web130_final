@@ -6286,7 +6286,7 @@ a.text-dark:hover, a.text-dark:focus {
   float: left;
   width: 8.3333333333%; }
 
-@media screen and (min-width: 40em) and (max-width: 63.99em) {
+@media screen and (min-width: 40em) and (max-width: 60em) {
   .col-md-1 {
     float: left;
     width: 8.3333333333%; } }
@@ -6300,7 +6300,7 @@ a.text-dark:hover, a.text-dark:focus {
   float: left;
   width: 16.6666666667%; }
 
-@media screen and (min-width: 40em) and (max-width: 63.99em) {
+@media screen and (min-width: 40em) and (max-width: 60em) {
   .col-md-2 {
     float: left;
     width: 16.6666666667%; } }
@@ -6314,7 +6314,7 @@ a.text-dark:hover, a.text-dark:focus {
   float: left;
   width: 25%; }
 
-@media screen and (min-width: 40em) and (max-width: 63.99em) {
+@media screen and (min-width: 40em) and (max-width: 60em) {
   .col-md-3 {
     float: left;
     width: 25%; } }
@@ -6328,7 +6328,7 @@ a.text-dark:hover, a.text-dark:focus {
   float: left;
   width: 33.3333333333%; }
 
-@media screen and (min-width: 40em) and (max-width: 63.99em) {
+@media screen and (min-width: 40em) and (max-width: 60em) {
   .col-md-4 {
     float: left;
     width: 33.3333333333%; } }
@@ -6342,7 +6342,7 @@ a.text-dark:hover, a.text-dark:focus {
   float: left;
   width: 41.6666666667%; }
 
-@media screen and (min-width: 40em) and (max-width: 63.99em) {
+@media screen and (min-width: 40em) and (max-width: 60em) {
   .col-md-5 {
     float: left;
     width: 41.6666666667%; } }
@@ -6356,7 +6356,7 @@ a.text-dark:hover, a.text-dark:focus {
   float: left;
   width: 50%; }
 
-@media screen and (min-width: 40em) and (max-width: 63.99em) {
+@media screen and (min-width: 40em) and (max-width: 60em) {
   .col-md-6 {
     float: left;
     width: 50%; } }
@@ -6370,7 +6370,7 @@ a.text-dark:hover, a.text-dark:focus {
   float: left;
   width: 58.3333333333%; }
 
-@media screen and (min-width: 40em) and (max-width: 63.99em) {
+@media screen and (min-width: 40em) and (max-width: 60em) {
   .col-md-7 {
     float: left;
     width: 58.3333333333%; } }
@@ -6384,7 +6384,7 @@ a.text-dark:hover, a.text-dark:focus {
   float: left;
   width: 66.6666666667%; }
 
-@media screen and (min-width: 40em) and (max-width: 63.99em) {
+@media screen and (min-width: 40em) and (max-width: 60em) {
   .col-md-8 {
     float: left;
     width: 66.6666666667%; } }
@@ -6398,7 +6398,7 @@ a.text-dark:hover, a.text-dark:focus {
   float: left;
   width: 75%; }
 
-@media screen and (min-width: 40em) and (max-width: 63.99em) {
+@media screen and (min-width: 40em) and (max-width: 60em) {
   .col-md-9 {
     float: left;
     width: 75%; } }
@@ -6412,7 +6412,7 @@ a.text-dark:hover, a.text-dark:focus {
   float: left;
   width: 83.3333333333%; }
 
-@media screen and (min-width: 40em) and (max-width: 63.99em) {
+@media screen and (min-width: 40em) and (max-width: 60em) {
   .col-md-10 {
     float: left;
     width: 83.3333333333%; } }
@@ -6426,7 +6426,7 @@ a.text-dark:hover, a.text-dark:focus {
   float: left;
   width: 91.6666666667%; }
 
-@media screen and (min-width: 40em) and (max-width: 63.99em) {
+@media screen and (min-width: 40em) and (max-width: 60em) {
   .col-md-11 {
     float: left;
     width: 91.6666666667%; } }
@@ -6440,7 +6440,7 @@ a.text-dark:hover, a.text-dark:focus {
   float: left;
   width: 100%; }
 
-@media screen and (min-width: 40em) and (max-width: 63.99em) {
+@media screen and (min-width: 40em) and (max-width: 60em) {
   .col-md-12 {
     float: left;
     width: 100%; } }
@@ -6464,11 +6464,16 @@ div#logo {
 
 .flex-container {
   display: flex;
+  flex-flow: row wrap;
   padding: 0;
   margin: 0; }
+  @media screen and (min-width: 40em) and (max-width: 60em) {
+    .flex-container {
+      justify-content: space-around; } }
   @media screen and (max-width: 39.99em) {
     .flex-container {
-      flex-wrap: wrap; } }
+      flex-wrap: wrap;
+      flex-direction: column; } }
   .flex-container li {
     flex: 1; }
     @media screen and (max-width: 39.99em) {
@@ -6496,15 +6501,15 @@ div#secondary-nav {
 nav#primary-nav {
   background-color: #5F5F5F;
   width: 100%;
-  height: 50px;
-  line-height: 50px;
-  clear: both; }
-  @media screen and (max-width: 39.99em) {
-    nav#primary-nav {
-      height: 100px; } }
+  clear: both;
+  position: relative; }
   nav#primary-nav ul {
-    width: 60%;
-    text-align: center; }
+    background: #5F5F5F;
+    width: 60%; }
+    @media screen and (min-width: 40em) and (max-width: 60em) {
+      nav#primary-nav ul {
+        width: 100%;
+        text-align: center; } }
     @media screen and (max-width: 39.99em) {
       nav#primary-nav ul {
         width: 100%; } }
@@ -6513,8 +6518,50 @@ nav#primary-nav {
       nav#primary-nav ul li:hover {
         background-color: #000000; }
       nav#primary-nav ul li a {
+        display: block;
         text-decoration: none;
-        color: #FFFFFF; }
+        color: #FFFFFF;
+        padding: 1em;
+        text-align: center; }
+
+#nav-toggle {
+  display: none; }
+  @media screen and (max-width: 39.99em) {
+    #nav-toggle {
+      display: block;
+      padding: 15px;
+      text-align: center;
+      color: #FFFFFF;
+      position: relative;
+      cursor: pointer; } }
+
+@media screen and (max-width: 39.99em) {
+  #topnav {
+    display: none; } }
+
+.hamburger {
+  background-image: url(../images/icon-menu-white.png);
+  background-size: cover;
+  height: 20px;
+  width: 20px;
+  display: block;
+  position: absolute;
+  right: 20px;
+  top: 15px; }
+
+.cross {
+  background-image: url(../images/icon-close-white.png);
+  background-size: cover;
+  height: 20px;
+  width: 20px;
+  display: block;
+  position: absolute;
+  right: 20px;
+  top: 15px; }
+
+@media screen and (max-width: 39.99em) {
+  main.container {
+    clear: both; } }
 
 .form-box {
   margin: 50px auto;
