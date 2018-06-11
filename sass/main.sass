@@ -11,9 +11,11 @@ div#logo
     margin: 0 auto
     text-align: center
     img
-        height: 100px
+        width: 450px 
+        margin: 20px
         @include size(small)
-            height: 80px
+            width: 420px 
+            margin: 15px 
 
 .flex-container
     display: flex
@@ -137,17 +139,54 @@ button[type="submit"]
     
 button[type="submit"]:hover
     background: $btnblue
-    
-// list_view
-.article-content
-    width: 50%
-    padding: 10px   
-    display: inline-block
-    
-    
+
+
 // article_detail
 main.container.article-detail
     margin-top: 45px
+
+    
+// list_view(index.html)
+#main-content
+    display: flex
+    flex-wrap: wrap
+    a
+        text-decoration: none
+        color: $black
+    h2
+        font-family: 'Kurale', serif
+    p
+        font-family: 'Open Sans', sans-serif
+        font-size: 1.2em
+        line-height: 1.4em
+    .article-content
+        flex-grow: 1
+        @include size(large)
+            padding: 10px  
+            flex-basis: 50%
+        @include size(medium)
+            padding: 5px  
+            flex-basis: 60%
+        @include size(small)
+            padding: 5px 
+            flex-basis: 100%
+            p
+                font-size: 1.3em
+  
+                
+// article detail
+.article-detail
+    h2
+        font-family: 'Kurale', serif
+    p
+        font-family: 'Open Sans', sans-serif
+        font-size: 1.2em
+        line-height: 1.4em
+    @include size(small)
+        padding: 5px 
+        p
+            font-size: 1.3em
+
     
 button#logout-button 
     background: transparent
