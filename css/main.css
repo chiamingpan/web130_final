@@ -6459,11 +6459,19 @@ body {
 
 button#logout-button {
   background: transparent;
-  color: #FDBC5C;
-  text-decoration: underline;
-  width: auto;
-  border: none;
-  cursor: pointer; }
+  color: #E8E8E8;
+  text-decoration: none;
+  cursor: pointer;
+  border: 2px solid #E8E8E8;
+  height: 30px;
+  line-height: 30px;
+  width: 30%;
+  border-radius: 15px;
+  padding: 0px 8px 10px 8px; }
+  button#logout-button:hover {
+    background: #E8E8E8;
+    border: 2px solid #E8E8E8;
+    color: #5F5F5F; }
 
 header {
   width: 100%; }
@@ -6656,7 +6664,16 @@ button[type="submit"] {
   border: none; }
 
 button[type="submit"]:hover {
-  background: #F97902; }
+  background: #F97902;
+  color: #FFFFFF; }
+
+button[type="submit"]:focus {
+  background: #F97902;
+  color: #FFFFFF; }
+
+button[type="submit"].focus {
+  background: #F97902;
+  color: #FFFFFF; }
 
 main.container.article-detail {
   margin-top: 45px; }

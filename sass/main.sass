@@ -11,15 +11,23 @@ body
 main.container
     @include size(small)
         clear: both
-        
+
 button#logout-button 
     background: transparent
-    color: $light-orange
-    text-decoration: underline
-    width: auto
-    border: none
+    color: $light-grey
+    text-decoration: none
     cursor: pointer
-    
+    border: 2px solid $light-grey
+    height: 30px
+    line-height: 30px
+    width: 30%
+    border-radius: 15px
+    padding: 0px 8px 10px 8px
+    &:hover
+        background: $light-grey
+        border: 2px solid $light-grey
+        color: $dark-grey
+        
 // HEADER   
 header
     width: 100%
@@ -211,8 +219,16 @@ button[type="submit"]
     color: $white
     border: none
     
-button[type="submit"]:hover
-    background: $dark-orange
+button[type="submit"]
+    &:hover
+        background: $dark-orange
+        color: $white
+    &:focus
+        background: $dark-orange
+        color: $white
+    &.focus
+        background: $dark-orange
+        color: $white
 
 // ARTICLE DETAILS
 
@@ -247,7 +263,6 @@ main.container.article-detail
             flex-basis: 70%   
         &:nth-child(2)
             flex-basis: 30%  
-            
     @include size(medium)
         padding: 5px
         flex-basis: 60%
