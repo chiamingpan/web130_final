@@ -6450,6 +6450,9 @@ a.text-dark:hover, a.text-dark:focus {
     float: left;
     width: 100%; } }
 
+body {
+  font-size: 14px; }
+
 header {
   width: 100%; }
 
@@ -6457,10 +6460,12 @@ div#logo {
   margin: 0 auto;
   text-align: center; }
   div#logo img {
-    height: 100px; }
+    width: 450px;
+    margin: 20px; }
     @media screen and (max-width: 39.99em) {
       div#logo img {
-        height: 80px; } }
+        width: 420px;
+        margin: 15px; } }
 
 .flex-container {
   display: flex;
@@ -6492,37 +6497,48 @@ div#secondary-nav {
       float: left;
       text-align: center; }
       div#secondary-nav ul li#login a {
-        text-decoration: underline;
-        color: #87CEEB; }
+        text-decoration: none;
+        color: #FDBC5C;
+        border: 2px solid #FDBC5C;
+        padding: 5px 15px;
+        border-radius: 20px;
+        transition: 0.05s ease; }
+        div#secondary-nav ul li#login a:hover {
+          background: #F97902;
+          border: 2px solid #F97902;
+          color: #FFFFFF; }
       @media screen and (max-width: 39.99em) {
         div#secondary-nav ul li#date, div#secondary-nav ul li#weather {
           display: none; } }
 
 nav#primary-nav {
-  background-color: #5F5F5F;
+  background-color: #CCCCCC;
   width: 100%;
   clear: both;
   position: relative; }
   nav#primary-nav ul {
-    background: #5F5F5F;
-    width: 60%; }
+    background: #CCCCCC;
+    width: 60%;
+    margin: 0 auto; }
     @media screen and (min-width: 40em) and (max-width: 60em) {
       nav#primary-nav ul {
         width: 100%;
-        text-align: center; } }
+        text-align: center;
+        padding-left: 0; } }
     @media screen and (max-width: 39.99em) {
       nav#primary-nav ul {
         width: 100%; } }
     nav#primary-nav ul li {
       list-style: none; }
       nav#primary-nav ul li:hover {
-        background-color: #000000; }
+        background-color: #FDBC5C; }
       nav#primary-nav ul li a {
         display: block;
         text-decoration: none;
-        color: #FFFFFF;
+        color: #5F5F5F;
         padding: 1em;
-        text-align: center; }
+        text-align: center;
+        letter-spacing: .05em; }
 
 #nav-toggle {
   display: none; }
@@ -6531,7 +6547,7 @@ nav#primary-nav {
       display: block;
       padding: 15px;
       text-align: center;
-      color: #FFFFFF;
+      color: #5F5F5F;
       position: relative;
       cursor: pointer; } }
 
@@ -6600,9 +6616,12 @@ div.submit-btn {
 
 input[type="submit"] {
   width: 50%;
-  background: #87CEEB;
+  background: #FDBC5C;
   color: #FFFFFF;
   border: none; }
+
+input[type="submit"]:hover {
+  background: #F97902; }
 
 #login-form {
   text-align: center; }
@@ -6624,24 +6643,67 @@ input[type="submit"] {
 
 button[type="submit"] {
   width: 100%;
-  background: #87CEEB;
+  background: #FDBC5C;
   color: #FFFFFF;
   border: none; }
 
 button[type="submit"]:hover {
-  background: #0DA4E3; }
-
-.article-content {
-  width: 50%;
-  padding: 10px;
-  display: inline-block; }
+  background: #F97902; }
 
 main.container.article-detail {
   margin-top: 45px; }
 
+#main-content {
+  display: flex;
+  flex-wrap: wrap; }
+  #main-content a {
+    text-decoration: none;
+    color: #000000;
+    transition: color 0.05s ease; }
+    #main-content a:hover {
+      text-decoration: underline;
+      color: #FDBC5C; }
+  #main-content h2 {
+    font-family: 'Kurale', serif; }
+  #main-content p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.2em;
+    line-height: 1.4em; }
+  #main-content .article-content {
+    flex-grow: 1; }
+    @media screen and (min-width: 61em) {
+      #main-content .article-content {
+        padding: 10px;
+        flex-basis: 50%; } }
+    @media screen and (min-width: 40em) and (max-width: 60em) {
+      #main-content .article-content {
+        padding: 5px;
+        flex-basis: 60%; } }
+    @media screen and (max-width: 39.99em) {
+      #main-content .article-content {
+        padding: 5px;
+        flex-basis: 100%; }
+        #main-content .article-content p {
+          font-size: 1.3em; } }
+
+.article-detail h2 {
+  font-family: 'Kurale', serif; }
+
+.article-detail p {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.2em;
+  line-height: 1.4em; }
+
+@media screen and (max-width: 39.99em) {
+  .article-detail {
+    padding: 5px; }
+    .article-detail p {
+      font-size: 1.3em; } }
+
 button#logout-button {
   background: transparent;
-  color: #87CEEB;
+  color: #FDBC5C;
   text-decoration: underline;
   width: auto;
-  border: none; }
+  border: none;
+  cursor: pointer; }

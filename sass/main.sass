@@ -3,7 +3,10 @@
 @import "bootstrap"
 @import "grid"
 
-// headergit 
+headergit 
+body
+    font-size: 14px
+    
 header
     width: 100%
     
@@ -11,9 +14,11 @@ div#logo
     margin: 0 auto
     text-align: center
     img
-        height: 100px
+        width: 450px 
+        margin: 20px
         @include size(small)
-            height: 80px
+            width: 420px 
+            margin: 15px 
 
 .flex-container
     display: flex
@@ -42,24 +47,34 @@ div#secondary-nav
             float: left
             text-align: center
             &#login a
-                text-decoration: underline
-                color: $skyblue
+                text-decoration: none
+                color: $light-orange
+                border: 2px solid $light-orange
+                padding: 5px 15px
+                border-radius: 20px
+                transition: 0.05s ease
+                &:hover
+                    background: $dark-orange
+                    border: 2px solid $dark-orange
+                    color: $white
             &#date, &#weather
                 @include size(small)
                     display: none
             
 nav#primary-nav
-    background-color: $dark-grey
+    background-color: $light-grey
     width: 100%
     clear: both
     position: relative
     @include size(small)
     ul
-        background: $dark-grey
+        background: $light-grey
         width: 60%
+        margin: 0 auto
         @include size(medium)
             width: 100%
             text-align: center
+            padding-left: 0
         @include size(small)
             width: 100%
                 
@@ -67,20 +82,22 @@ nav#primary-nav
             list-style: none
                 
             &:hover
-                background-color: $black 
+                background-color: $light-orange
             a
                 display: block
                 text-decoration: none
-                color: $white
+                color: $dark-grey
                 padding: 1em
                 text-align: center
+                // font-weight: 700
+                letter-spacing: .05em 
 #nav-toggle
     display: none
     @include size(small)
         display: block
         padding: 15px
         text-align: center
-        color: $white
+        color: $dark-grey
         position: relative
         cursor: pointer
     
@@ -111,6 +128,7 @@ nav#primary-nav
     top: 15px
 
 //main section
+
 main.container
     @include size(small)
         clear: both
@@ -153,10 +171,12 @@ div.submit-btn
 
 input[type="submit"] 
     width: 50%   
-    background: $skyblue
+    background: $light-orange
     color: $white
     border: none
-
+    
+input[type="submit"]:hover
+    background: $dark-orange
 
 // vera_login
 #login-form
@@ -177,31 +197,75 @@ input[type="submit"]
         margin-top: 30px
         margin-bottom: 15px
         width: 100%
+        
 
 button[type="submit"] 
     width: 100%   
-    background: $skyblue
+    background: $light-orange
     color: $white
     border: none
     
 button[type="submit"]:hover
-    background: $btnblue
-    
-// list_view
-.article-content
-    width: 50%
-    padding: 10px   
-    display: inline-block
-    
-    
+    background: $dark-orange
+
+
 // article_detail
 
 main.container.article-detail
     margin-top: 45px
+
+    
+// list_view(index.html)
+#main-content
+    display: flex
+    flex-wrap: wrap
+    a
+        text-decoration: none
+        color: $black
+        transition: color 0.05s ease
+        &:hover
+            text-decoration: underline
+            color: $light-orange
+    h2
+        font-family: 'Kurale', serif
+
+    p
+        font-family: 'Open Sans', sans-serif
+        font-size: 1.2em
+        line-height: 1.4em
+    .article-content
+        flex-grow: 1
+        @include size(large)
+            padding: 10px  
+            flex-basis: 50%
+        @include size(medium)
+            padding: 5px  
+            flex-basis: 60%
+        @include size(small)
+            padding: 5px 
+            flex-basis: 100%
+            p
+                font-size: 1.3em
+  
+                
+// article detail
+.article-detail
+    h2
+        font-family: 'Kurale', serif
+    p
+        font-family: 'Open Sans', sans-serif
+        font-size: 1.2em
+        line-height: 1.4em
+    @include size(small)
+        padding: 5px 
+        p
+            font-size: 1.3em
+
     
 button#logout-button 
     background: transparent
-    color: #87CEEB
+    color: $light-orange
     text-decoration: underline
     width: auto
     border: none
+    cursor: pointer

@@ -75,7 +75,7 @@ $(document).ready(function() {
             contentType: 'application/json' 
         });
     }
-  
+
     // Form View
     if (typeof JS_PAGE !== 'undefined' && JS_PAGE == 'form_view') {
         $('#save-article-button').on('click', (event) => {
