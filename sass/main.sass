@@ -3,10 +3,24 @@
 @import "bootstrap"
 @import "grid"
 
-headergit 
+// GENERAL 
+
 body
     font-size: 14px
+
+main.container
+    @include size(small)
+        clear: both
+        
+button#logout-button 
+    background: transparent
+    color: $light-orange
+    text-decoration: underline
+    width: auto
+    border: none
+    cursor: pointer
     
+// HEADER   
 header
     width: 100%
     
@@ -60,7 +74,7 @@ div#secondary-nav
             &#date, &#weather
                 @include size(small)
                     display: none
-            
+
 nav#primary-nav
     background-color: $light-grey
     width: 100%
@@ -77,10 +91,8 @@ nav#primary-nav
             padding-left: 0
         @include size(small)
             width: 100%
-                
         li
             list-style: none
-                
             &:hover
                 background-color: $light-orange
             a
@@ -89,7 +101,6 @@ nav#primary-nav
                 color: $dark-grey
                 padding: 1em
                 text-align: center
-                // font-weight: 700
                 letter-spacing: .05em 
 #nav-toggle
     display: none
@@ -116,7 +127,6 @@ nav#primary-nav
     right: 20px
     top: 15px
 
-
 .cross
     background-image: url(../images/icon-close-white.png)
     background-size: cover
@@ -127,13 +137,9 @@ nav#primary-nav
     right: 20px
     top: 15px
 
-//main section
-
-main.container
-    @include size(small)
-        clear: both
     
-// form
+// ARICLE FORM
+
 .form-box
     margin: 50px auto
     width: 100%
@@ -178,9 +184,9 @@ input[type="submit"]
 input[type="submit"]:hover
     background: $dark-orange
 
-// vera_login
+// LOGIN FORM
+
 #login-form
-    // display: inline-block
     text-align: center
         
 .editor-login 
@@ -208,14 +214,12 @@ button[type="submit"]
 button[type="submit"]:hover
     background: $dark-orange
 
-
-// article_detail
+// ARTICLE DETAILS
 
 main.container.article-detail
     margin-top: 45px
 
-    
-// list_view(index.html)
+// LIST VIEW 
 #main-content
     display: flex
     flex-wrap: wrap
@@ -233,22 +237,28 @@ main.container.article-detail
         font-family: 'Open Sans', sans-serif
         font-size: 1.2em
         line-height: 1.4em
-    .article-content
-        flex-grow: 1
-        @include size(large)
-            padding: 10px  
-            flex-basis: 50%
-        @include size(medium)
-            padding: 5px  
-            flex-basis: 60%
-        @include size(small)
-            padding: 5px 
-            flex-basis: 100%
-            p
-                font-size: 1.3em
   
-                
-// article detail
+.article-content
+    flex-grow: 1
+    @include size(large)
+        padding: 10px  
+        flex-basis: 50%
+        &:nth-child(1)
+            flex-basis: 70%   
+        &:nth-child(2)
+            flex-basis: 30%  
+            
+    @include size(medium)
+        padding: 5px
+        flex-basis: 60%
+    @include size(small)
+        padding: 5px 
+        flex-basis: 100%
+        p
+            font-size: 1.3em
+
+
+// ARTICLE DETAIL
 .article-detail
     h2
         font-family: 'Kurale', serif
@@ -262,10 +272,3 @@ main.container.article-detail
             font-size: 1.3em
 
     
-button#logout-button 
-    background: transparent
-    color: $light-orange
-    text-decoration: underline
-    width: auto
-    border: none
-    cursor: pointer

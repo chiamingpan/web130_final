@@ -9,6 +9,4 @@ $(document).ready(function(){
         $("#topnav").slideToggle(500);
         $(".hamburger").toggleClass(" cross");
     });
-
-    
 }); 
