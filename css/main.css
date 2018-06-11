@@ -6512,12 +6512,12 @@ div#secondary-nav {
           display: none; } }
 
 nav#primary-nav {
-  background-color: #CCCCCC;
+  background-color: #E8E8E8;
   width: 100%;
   clear: both;
   position: relative; }
   nav#primary-nav ul {
-    background: #CCCCCC;
+    background: #E8E8E8;
     width: 60%;
     margin: 0 auto; }
     @media screen and (min-width: 40em) and (max-width: 60em) {
@@ -6593,11 +6593,11 @@ input, textarea, select#catergory {
   height: 35px;
   line-height: 35px;
   width: 100%;
-  border: 1px solid #CCCCCC;
+  border: 1px solid #E8E8E8;
   border-radius: 5px;
   background: #FFFFFF; }
   input::placeholder, textarea::placeholder, select#catergory::placeholder {
-    color: #CCCCCC;
+    color: #E8E8E8;
     font-size: .9em; }
   input[type="text"], textarea[type="text"], select#catergory[type="text"] {
     padding-left: 10px; }
@@ -6608,7 +6608,7 @@ textarea {
 
 select#catergory {
   font-size: .9em;
-  color: #CCCCCC; }
+  color: #E8E8E8; }
 
 div.submit-btn {
   margin-top: 20px;
@@ -6630,7 +6630,7 @@ input[type="submit"]:hover {
   margin: 0 auto;
   padding: 45px;
   border-radius: 6px;
-  border: 1px solid #CCCCCC; }
+  border: 1px solid #E8E8E8; }
   .editor-login h3 {
     margin-bottom: 22px; }
   .editor-login .input-group {
